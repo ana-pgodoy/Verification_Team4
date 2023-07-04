@@ -1,12 +1,11 @@
+/*
 Disenador: Paulina Vianney Núñez Luna
 Modulo: agent_port1
 Compania: Cinvestav
 Contacto: paulinav.nunezl@gmail.com
-
 */
 
 import uvm_pkg::*;
-`include "uvm_macros.svh"
 
 class agent_port1 extends uvm_agent
   `uvm_component_utils(agent_port1)
