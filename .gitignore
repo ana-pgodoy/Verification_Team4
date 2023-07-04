@@ -1,0 +1,4 @@
+verif/work/*
+!verif/work/Makefile
+!verif/work/list.f
+
