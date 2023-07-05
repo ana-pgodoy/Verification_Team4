@@ -11,10 +11,17 @@ virtual class port0_scb extends uvm_scoreboard;
   `uvm_component_utils(port0_scb)
 
   uvm_analysis_export #(uvm_sequence_item) analysis_export0;
+  uvm_tlm_analysis_fifo#(uvm_sequence_item) analysis_fifo;
 
   function new (string name, uvm_component parent);
     super.new(name, parent);
 	analysis_export0=new("analysis_export0",this);
-  endfunction 
+	analysis_fifo=new("analysis_fifo",this);
+  endfunction
+  
+  	function void connect_phase(uvm_phase phase);
+		super.connect_phase(phase);
+		analysis_export0.connect(analysis_fifo.analysis_export);
+	endfunction
 
 endclass : port0_scb

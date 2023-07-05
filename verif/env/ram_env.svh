@@ -1,6 +1,6 @@
 /*
 Atribute: enviroment
-Author: 
+Author: Ana Paula Godoy Monroy
 Date: 03/07/2023
 Version: 01
 File name: ram_env.svh
