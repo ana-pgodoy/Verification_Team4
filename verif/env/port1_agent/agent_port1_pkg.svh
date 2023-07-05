@@ -1,10 +1,8 @@
 /*
-
-Disenador: Paulina Vianney Núñez Luna
-Modulo: agent_port1_pkg
-Compania: Cinvestav
-Contacto: paulinav.nunezl@gmail.com
-
+Atribute: agent_port1_pkg
+Author: Paulina Vianney Núñez Luna
+Date: 4/07/2023
+File name: agent_port1_pkg
 */
 package agent_port1_pkg;
 	import uvm_pkg::*;
