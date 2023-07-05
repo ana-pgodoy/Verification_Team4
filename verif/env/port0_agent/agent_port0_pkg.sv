@@ -10,6 +10,7 @@ package agent_port0_pkg;
 	import uvm_pkg::*;
 	`include "uvm_macros.svh"
 	
+	`include "port0_transaction.svh"
 	`include "port0_monitor.svh"
 	`include "port0_driver.svh"
 	`include "port0_scb.svh"
