@@ -7,9 +7,6 @@ Contacto: a.g.ben.min@gmail.com
 
 */
 
-import uvm_pkg::*;
-`include "uvm_macros.svh"
-
 class agent_port0 extends uvm_agent
 	`uvm_component_utils(agent_port0)
 	//scoreboard

@@ -7,8 +7,6 @@ Contacto: a.g.ben.min@gmail.com
 
 */
 
-import uvm_pkg::*;
-`include "uvm_macros.svh"
 
 //MISDATOS nombre filler mientras tanto
 class port0_driver extends uvm_driver#(MISDATOS)

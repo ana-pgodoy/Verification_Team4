@@ -5,8 +5,7 @@ Date: 29/06/2023
 Version: 01
 File name: port0_monitor.sv
 */
-import uvm_pkg::*;
-`include "uvm_macros.svh"
+
 
 virtual class port0_monitor extends uvm_monitor;
 	`uvm_component_utils(port0_monitor)
