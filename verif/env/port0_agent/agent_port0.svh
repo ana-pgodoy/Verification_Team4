@@ -10,10 +10,17 @@ Contacto: a.g.ben.min@gmail.com
 class agent_port0 extends uvm_agent
 	`uvm_component_utils(agent_port0)
 	//scoreboard
+	port0_scb scoreboard;
 	//driver
+	port0_driver driver;
 	//monitor
+	port0_monitor monitor;
 	//subscriber
+	port0_subs subscriber;
 	//sequencer
+	//MISDATOS nombre filler mientras tanto
+	port0_sqr #(MISDATOS)sequencer;
+	
 	function new(input string name, uvm_component parent);
 		super.new(name,parent);
 	endfunction
