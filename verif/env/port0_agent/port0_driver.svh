@@ -16,5 +16,9 @@ class port0_driver extends uvm_driver#(MISDATOS)
 		super.new(name,parent);
 	endfunction
 	
+	
+	virtual task run_phase(uvm_phase phase);
+		`uvm_info(get_name(), "Run Phase", UVM_NONE)
+	endtask
 
 endclass
