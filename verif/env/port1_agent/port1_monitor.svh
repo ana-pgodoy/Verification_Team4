@@ -1,12 +1,9 @@
 /*
-
-Diseñador: Paulina Vianney Núñez Luna
-Modulo: port1_monitor
-Compania: Cinvestav
-Contacto: paulinav.nunezl@gmail.com
-
+Atribute: port1_monitor
+Author: Paulina Vianney Núñez Luna
+Date: 4/07/2023
+File name: port1_monitor
 */
-
 
 virtual class port1_monitor extends uvm_monitor;
   `uvm_component_utils(port1_monitor)
