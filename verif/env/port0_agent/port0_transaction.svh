@@ -21,7 +21,7 @@ class port0_transaction extends uvm_sequence_item;
   endfunction 
 
 	//Register class data into factory
-	`uvm_object_utils_begin(transaction)
+	`uvm_object_utils_begin(port0_transaction)
 		`uvm_field_int(cs0,UVM_ALL_ON)
 		`uvm_field_int(we0,UVM_ALL_ON)
 		`uvm_field_int(wmask0,UVM_ALL_ON)
