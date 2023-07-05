@@ -20,7 +20,7 @@ class agent_port0 extends uvm_agent
 	//sequencer
 	//MISDATOS nombre filler mientras tanto
 	port0_sqr #(MISDATOS)sequencer;
-	//FALTAN LOS INOUTS
+	
 	function new(input string name, uvm_component parent);
 		super.new(name,parent);
 	endfunction
@@ -33,7 +33,7 @@ class agent_port0 extends uvm_agent
 		driver=port0_driver::type_id::create("driver",this);
 		monitor=port0_monitor::type_id::create("monitor",this);
 		sequencer=port0_sqr::type_id::create("sequencer",this);
-		//TAMBIEN AQUI FALTAN LOS INOUTS
+		
 		
 	endfunction
 	
