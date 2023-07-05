@@ -18,4 +18,8 @@ virtual class port0_monitor extends uvm_monitor;
 	analysis_port0=new("analysis_port0",this);
   endfunction 
   
+  virtual task run_phase(uvm_phase phase);
+		`uvm_info(get_name(), "Run Phase", UVM_NONE)
+	endtask
+  
 endclass : port0_monitor

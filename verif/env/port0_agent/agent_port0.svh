@@ -27,16 +27,21 @@ class agent_port0 extends uvm_agent
 	
 	function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
-		//monitor=port0_monitor::type_id::create("monitor",this);
-		//scoreboard
-		//driver
-		//monitor
-		//sequencer
+		
+		monitor=port0_monitor::type_id::create("monitor",this);
+		scoreboard=port0_scb::type_id::create("scoreboard",this);
+		driver=port0_driver::type_id::create("driver",this);
+		monitor=port0_monitor::type_id::create("monitor",this);
+		sequencer=port0_sqr::type_id::create("sequencer",this);
+		
+		
 	endfunction
 	
 	virtual function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
 		`uvm_info(get_name(), "Connect Phase", UVM_NONE)
+		
+		
 	endfunction
   
 	virtual task run_phase(uvm_phase phase);
