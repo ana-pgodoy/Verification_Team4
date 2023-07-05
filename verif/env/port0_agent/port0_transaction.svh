@@ -1,6 +1,6 @@
 /*
 Atribute: transaction
-Author: Ana Paula Godoy Monroy
+Author: Ana Paula Godoy Monroy, Benjamin Gonzalez Alvarado
 Date: 05/07/2023
 Version:01
 File name: port0_transaction.svh
@@ -8,13 +8,13 @@ File name: port0_transaction.svh
 
 class port0_transaction extends uvm_sequence_item;
 	//Inputs
-	rand bit           cs0;		
-	rand bit           we0;
-	rand bit   	[3:0]  wmask0;
-	rand bit	[10:0] addr0;
-	rand bit	[32:0] din0;
+	rand bit         	   			cs0;		
+	rand bit      	      			we0;
+	rand bit 	[WMASK_WIDTH-1:0]  	wmask0;
+	rand bit	[ADDRESS_WIDTH-1:0] addr0;
+	rand bit	[DATA_WIDTH-1:0] 	din0;
 	//Output
-	logic 		[32:0] dout0;
+	logic 		[DATA_WIDTH-1:0] 	dout0;
 	
   function new (string inst = "");
     super.new(inst);
