@@ -10,8 +10,8 @@ File name: port0_scb.sv
 virtual class port0_scb extends uvm_scoreboard;
   `uvm_component_utils(port0_scb)
 
-  uvm_analysis_export #(uvm_sequence_item) analysis_export0;
-  uvm_tlm_analysis_fifo#(uvm_sequence_item) analysis_fifo;
+  uvm_analysis_export #(port0_transaction) analysis_export0;
+  uvm_tlm_analysis_fifo#(port0_transaction) analysis_fifo;
 
   function new (string name, uvm_component parent);
     super.new(name, parent);
