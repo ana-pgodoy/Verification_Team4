@@ -8,8 +8,8 @@ Contacto: a.g.ben.min@gmail.com
 */
 
 
-//MISDATOS nombre filler mientras tanto
-class port0_driver extends uvm_driver#(MISDATOS)
+
+class port0_driver extends uvm_driver#(port0_transaction)
 	`uvm_component_utils(port0_driver)
 
 	virtual port0_intf port0_vintf;

@@ -18,8 +18,8 @@ class agent_port0 extends uvm_agent
 	//subscriber
 	port0_subs subscriber;
 	//sequencer
-	//MISDATOS nombre filler mientras tanto
-	port0_sqr #(MISDATOS)sequencer;
+	
+	port0_sqr #(port0_transaction)sequencer;
 	
 	function new(input string name, uvm_component parent);
 		super.new(name,parent);
