@@ -1,3 +1,9 @@
+/*
+Atribute: port1_transaction
+Author: Paulina Vianney Núñez Luna
+Date: 5/07/2023
+File name: port1_transaction
+*/
 class port1_transaction extends uvm_sequence_item;
 	//Inputs
 	rand bit         	   			cs1;		
