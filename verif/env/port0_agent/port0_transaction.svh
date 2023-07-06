@@ -11,7 +11,7 @@ class port0_transaction extends uvm_sequence_item;
 	rand bit         	   			cs0;		
 	rand bit      	      			we0;
 	rand bit 	[WMASK_WIDTH-1:0]  	wmask0;
-	rand bit	[ADDRESS_WIDTH-1:0] addr0;
+	rand bit	[ADDR_WIDTH-1:0] addr0;
 	rand bit	[DATA_WIDTH-1:0] 	din0;
 	//Output
 	logic 		[DATA_WIDTH-1:0] 	dout0;
