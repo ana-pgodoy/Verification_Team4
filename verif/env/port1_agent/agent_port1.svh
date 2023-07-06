@@ -23,6 +23,7 @@ class agent_port1 extends uvm_agent
 	
 	function new(input string name, uvm_component parent);
 		super.new(name,parent);
+	    analysis_port1=new("analysis_port1",this);
 	endfunction
 	
 	function void build_phase(uvm_phase phase);
