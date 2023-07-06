@@ -10,7 +10,7 @@ interface port0_intf(input logic clk0);
 	bit          		    cs0;		
 	bit         		    we0;
 	bit   	[WMASK_WIDTH-1:0]   wmask0;
-	bit	[ADDRESS_WIDTH-1:0] addr0;
+	bit	[ADDR_WIDTH-1:0] addr0;
 	bit	[DATA_WIDTH-1:0]    din0;
 	//Output
 	logic   [DATA_WIDTH-1:0]    dout0;
