@@ -8,5 +8,5 @@ package ram_defines_pkg;
 
 //Parameters port1  
   `define ADDR_WIDTH_1      4'hA
-  `define WMASK_WIDTH_1     6'h20
+  `define DATA_WIDTH_1     6'h20
 endpackage
