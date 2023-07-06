@@ -7,7 +7,7 @@ Version: 01
 File name: port0_scb.sv
 */
 
-virtual class port0_scb extends uvm_scoreboard;
+class port0_scb extends uvm_scoreboard;
   `uvm_component_utils(port0_scb)
 
   uvm_analysis_export #(port0_transaction) analysis_export0;
