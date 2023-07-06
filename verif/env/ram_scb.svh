@@ -31,11 +31,3 @@ class ram_scb extends uvm_scoreboard;
 
 endclass : ram_scb
 
-class ram_env extends uvm_env;
-	`uvm_component_utils(ram_env)
-	
-	agent_port0 agent_0;
-	agent_port1 agent_1;
-	ram_scb scoreboard;
-  
-endclass : ram_env
