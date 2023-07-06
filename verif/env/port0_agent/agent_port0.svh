@@ -20,9 +20,12 @@ class agent_port0 extends uvm_agent
 	//sequencer
 	
 	port0_sqr #(port0_transaction)sequencer;
+
+	uvm_analysis_port #(port0_transaction) analysis_port0;
 	
 	function new(input string name, uvm_component parent);
 		super.new(name,parent);
+	        analysis_port0=new("analysis_port0",this);
 	endfunction
 	
 	function void build_phase(uvm_phase phase);
@@ -42,9 +45,11 @@ class agent_port0 extends uvm_agent
 		`uvm_info(get_name(), "Connect Phase", UVM_NONE)
 		//built in
 		driver.seq_item_port.connect(sequencer.seq_item_export);
-		monitor.analysis_port0.connect(scoreboard,analysis_export0);
+		monitor.analysis_port0.connect(scoreboard.analysis_export0);
 		//built in 
-		monitor.analysis_port0.connect(subscriber,analysis_export);
+		monitor.analysis_port0.connect(subscriber.analysis_export);
+
+		monitor.analysis_port0.connect(analysis_port0);
 	endfunction
   
 	virtual task run_phase(uvm_phase phase);
