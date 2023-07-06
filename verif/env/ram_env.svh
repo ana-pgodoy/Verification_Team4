@@ -20,7 +20,7 @@ class ram_env extends uvm_env;
     super.build_phase(phase);
     `uvm_info(get_name(), "Build Phase", UVM_MEDIUM)
 	agent_0=agent_port0::type_id::create("agent_0",this);
-	agent_1=agent_port1t::type_id::create("agent_1",this);
+	agent_1=agent_port1::type_id::create("agent_1",this);
 	scorebord=ram_scb::type_id::create("scoreboard",this);
   endfunction
 
