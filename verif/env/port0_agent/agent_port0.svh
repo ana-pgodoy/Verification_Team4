@@ -33,15 +33,18 @@ class agent_port0 extends uvm_agent
 		driver=port0_driver::type_id::create("driver",this);
 		monitor=port0_monitor::type_id::create("monitor",this);
 		sequencer=port0_sqr::type_id::create("sequencer",this);
-		
+		subscriber = port0_subs::type_id::create("subscriber",this);
 		
 	endfunction
 	
 	virtual function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
 		`uvm_info(get_name(), "Connect Phase", UVM_NONE)
-		
-		
+		//built in
+		driver.seq_item_port.connect(sequencer.seq_item_export);
+		monitor.analysis_port0.connect(scoreboard,analysis_export0);
+		//built in 
+		monitor.analysis_port0.connect(subscriber,analysis_export);
 	endfunction
   
 	virtual task run_phase(uvm_phase phase);
