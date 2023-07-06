@@ -10,7 +10,7 @@ Contacto: a.g.ben.min@gmail.com
 
 
 class port0_sqr extends uvm_sequencer#(port0_transaction)
-	`uvm_component_utils(port0_sqr)
+	`uvm_sequencer_utils(port0_sqr)
 
 	function new(input string name, uvm_component parent);
 		super.new(name,parent);
