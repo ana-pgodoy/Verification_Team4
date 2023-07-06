@@ -21,14 +21,14 @@ class ram_env extends uvm_env;
     `uvm_info(get_name(), "Build Phase", UVM_MEDIUM)
 	agent_0=agent_port0::type_id::create("agent_0",this);
 	agent_1=agent_port1::type_id::create("agent_1",this);
-	scorebord=ram_scb::type_id::create("scoreboard",this);
+	scoreboard=ram_scb::type_id::create("scoreboard",this);
   endfunction
 
 virtual function void connect_phase(uvm_phase phase);
 	super.connect_phase(phase);
 	`uvm_info(get_name(), "Connect Phase", UVM_MEDIUM)
-	agent_port0.analysis_port0.connect(scoreboard.analysis_export0);
-	agent_port1.analysis_port1.connect(scoreboard.analysis_export1);
+	agent_0.analysis_port0.connect(scoreboard.analysis_export0);
+	agent_1.analysis_port1.connect(scoreboard.analysis_export1);
 endfunction
   
 endclass : ram_env
