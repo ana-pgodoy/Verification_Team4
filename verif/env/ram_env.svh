@@ -8,9 +8,9 @@ File name: ram_env.svh
 class ram_env extends uvm_env;
 	`uvm_component_utils(ram_env)
 	
-	port0_agent agent_0;
-	port1_agent agent_1;
-	ram_scb scoreboard
+	agent_port0 agent_0;
+	agent_port1 agent_1;
+	ram_scb scoreboard;
 	
   function new (string name, uvm_component parent);
     super.new(name, parent);
@@ -19,16 +19,16 @@ class ram_env extends uvm_env;
    virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     `uvm_info(get_name(), "Build Phase", UVM_MEDIUM)
-	agent_0=port0_agent::type_id::create("agent_0",this);
-	agent_1=port1_agent::type_id::create("agent_1",this);
+	agent_0=agent_port0::type_id::create("agent_0",this);
+	agent_1=agent_port1t::type_id::create("agent_1",this);
 	scorebord=ram_scb::type_id::create("scoreboard",this);
   endfunction
 
 virtual function void connect_phase(uvm_phase phase);
 	super.connect_phase(phase);
 	`uvm_info(get_name(), "Connect Phase", UVM_MEDIUM)
-	port0_agent.analysis_port0.connect(scoreboard.analysis_export0);
-	port1_agent.analysis_port1.connect(scoreboard.analysis_export1);
+	agent_port0.analysis_port0.connect(scoreboard.analysis_export0);
+	agent_port1.analysis_port1.connect(scoreboard.analysis_export1);
 endfunction
   
 endclass : ram_env
