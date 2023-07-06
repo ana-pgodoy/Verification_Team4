@@ -19,7 +19,7 @@ class port1_monitor extends uvm_monitor;
 virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
   if(!uvm_config_db #(virtual
-  port1_intf)::get(this,"","port0_intf", intf0))
+  port1_intf)::get(this,"","port1_intf", intf1))
 		  `uvm_fatal(get_name(),"Failed to get interface")
 endfunction
 		  
