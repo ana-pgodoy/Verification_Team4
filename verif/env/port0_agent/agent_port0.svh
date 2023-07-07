@@ -19,7 +19,7 @@ class agent_port0 extends uvm_agent
 	port0_subs subscriber;
 	//sequencer
 	
-	port0_sqr #(port0_transaction)sequencer;
+	port0_sqr sequencer;
 
 	uvm_analysis_port #(port0_transaction) analysis_port0;
 	
