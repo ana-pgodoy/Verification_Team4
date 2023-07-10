@@ -9,8 +9,8 @@ File name: port1_scb
 class port1_scb extends uvm_scoreboard;
 	`uvm_component_utils(port1_scb)
 
-	uvm_analysis_export #(uvm_sequence_item) ana_export1;
-	uvm_tlm_analysis_fifo#(uvm_sequence_item) ana_fifo;
+	uvm_analysis_export #(port1_transaction) ana_export1;
+	uvm_tlm_analysis_fifo#(port1_transaction) ana_fifo;
 
 	function new(string name, uvm_component parent);
 		super.new(name,parent);
