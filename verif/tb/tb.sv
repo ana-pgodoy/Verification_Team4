@@ -10,7 +10,8 @@ module tb;
   
     ram_base_test test;
   //clock variable//
-	bit clk;
+	bit clk0;
+	bit clk1;
   
   // interfaces instances //
   port0_intf intf0(clk0);
