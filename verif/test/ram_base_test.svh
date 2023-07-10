@@ -20,4 +20,10 @@ class ram_base_test extends uvm_test;
 	enviroment=ram_env::type_id::create("enviroment",this);
   endfunction
   
+	virtual function void end_of_elaboration_phase(uvm_phase phase);
+    super.build_phase(phase);
+    `uvm_info(get_name(), "PRINT TOPOLOGY", UVM_MEDIUM)
+  	uvm_top.print_topology();
+	endfunction
+  
 endclass : ram_base_test

@@ -5,11 +5,13 @@ Date: 05/07/23
 Version:01
 File name: tb.sv
 */
+	import uvm_pkg::*;
+	`include "uvm_macros.svh"
+	import ram_test_pkg::*;
 
 module tb;
   
-    ram_base_test test;
-  //clock variable//
+	//clock variable//
 	bit clk0;
 	bit clk1;
   
@@ -31,16 +33,18 @@ module tb;
       .dout1(intf1.dout1));
   
   // generate clk signal //
-  always clk = #5 ~clk;
+  always clk0 = #5 ~clk0;
+  always clk1 = #5 ~clk1;
 
-
+	initial begin 
+	run_test();
+	end
   // Connecting TLM ports and sending interfaces to transactors (monitors and drivers) //
 	initial begin
     uvm_config_db#(virtual port0_intf)::set(null,"*","port0_intf",intf0);
     uvm_config_db#(virtual port1_intf)::set(null,"*","port1_intf",intf1);
 
-    test =new("ram_base_test", null);
-    run_test();
+    //test =new("ram_base_test", null);
 	end
  
 endmodule

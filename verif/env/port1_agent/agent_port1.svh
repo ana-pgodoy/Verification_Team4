@@ -6,7 +6,7 @@ File name: agent_port1
 */
 
 class agent_port1 extends uvm_agent;
-  `uvm_component_utils(agent_port1);
+  `uvm_component_utils(agent_port1)
 	//scoreboard
  	port1_scb scoreboard;
 	//driver
