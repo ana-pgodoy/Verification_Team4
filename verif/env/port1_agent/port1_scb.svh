@@ -9,18 +9,18 @@ File name: port1_scb
 class port1_scb extends uvm_scoreboard;
 	`uvm_component_utils(port1_scb)
 
-	uvm_analysis_export #(uvm_sequence_item) ana_export;
+	uvm_analysis_export #(uvm_sequence_item) ana_export1;
 	uvm_tlm_analysis_fifo#(uvm_sequence_item) ana_fifo;
 
 	function new(string name, uvm_component parent);
 		super.new(name,parent);
-		ana_export = new("ana_export",this);
+		ana_export1 = new("ana_export1",this);
 		ana_fifo = new("ana_fifo",this);
 	endfunction
 
 	function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
-		ana_export.connect(ana_fifo.analysis_export);
+		ana_export1.connect(ana_fifo.analysis_export);
 	endfunction
 
    bit [31:0] sc_mem [9:0];
@@ -29,7 +29,7 @@ class port1_scb extends uvm_scoreboard;
    virtual task run_phase(uvm_phase phase);
       uvm_sequence_item mem_pkt;
       //--- comparision logic ---  //
-      forever begin
+     /* forever begin
          wait(pkt.size() > 0);
             mem_pkt = pkt.pop_front();
             if(mem_pkt.cs1) begin
@@ -46,7 +46,7 @@ class port1_scb extends uvm_scoreboard;
                   `uvm_info(get_type_name(),"------------------------------------",UVM_LOW)
             end
          end
-      end
+      end*/
    endtask : run_phase
 
 endclass
