@@ -5,8 +5,8 @@ Date: 4/07/2023
 File name: port1_driver
 */
 
-class port1_driver extends uvm_driver#(port1_transaction)
-  `uvm_component_utils(port1_driver)
+class port1_driver extends uvm_driver#(port1_transaction);
+  `uvm_component_utils(port1_driver);
 
 	virtual port1_intf port1_vintf;
 

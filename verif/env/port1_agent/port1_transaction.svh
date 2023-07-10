@@ -5,13 +5,15 @@ Date: 5/07/2023
 File name: port1_transaction
 */
 
+import ram_defines_pkg::*;
+
 class port1_transaction extends uvm_sequence_item;
 	//Inputs
-	rand bit        cs1;		
-	rand bit      	we1;
-        rand bit	[ADDR_WIDTH_1-1:0] addr1;
+	rand bit        				cs1;		
+	rand bit      					we1;
+    rand bit	[`ADDR_WIDTH_1-1:0] addr1;
 	//Output
-        logic 		[DATA_WIDTH_1-1:0] dout1;
+    logic 		[`DATA_WIDTH_1-1:0] dout1;
 	
   function new (string inst = "");
     super.new(inst);

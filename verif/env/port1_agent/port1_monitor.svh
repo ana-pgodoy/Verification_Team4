@@ -27,10 +27,10 @@ endfunction
       port1_transaction data;
       data = port1_transaction::type_id::create("data");
   	  @(posedge intf1.clk1);
-	        data.cs1 = intf1.cs1;
+	    data.cs1 = intf1.cs1;
 		data.we1 = intf1.we1;
 		data.addr1 = intf1.addr1;
-	 	data.din1 = intf1.din1;
+	 	//data.din1 = intf1.din1;
 	  	data.dout1 = intf1.dout1;
 		analysis_port1.write(data);
    endtask  
