@@ -7,9 +7,9 @@
     ../intf/port1_intf.sv
     +incdir+../refmodel
     +incdir+../env/port0_agent
-    ../env/agent_port0_pkg.sv
+    ../env/port0_agent/agent_port0_pkg.sv
     +incdir+../env/port1_agent
-    ../env/agent_port1_pkg.sv
+    ../env/port1_agent/agent_port1_pkg.sv
     +incdir+../env
     ../env/ram_env_pkg.sv
     +incdir+../seq
