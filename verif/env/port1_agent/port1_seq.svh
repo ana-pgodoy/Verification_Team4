@@ -1,7 +1,13 @@
-class port1_sequencer extends uvm_sequencer#(uvm_sequence_item);
-	`uvm_component_utils(port1_sequencer)
+/*
+Atribute: port1_seq
+Author: Cristian Eduardo Gomez de la Torre
+Date: 2/07/2023
+Version:
+File name: port1_seq
+*/
 
-  //driver.seq_item_port.connect(sequencer.seq_item_export);
+class port1_sequencer extends uvm_sequencer#(port1_transaction);
+	`uvm_component_utils(port1_sequencer)
 
   function new(string name, uvm_component parent);
     super.new(name, parent);

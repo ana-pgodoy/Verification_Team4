@@ -34,7 +34,6 @@ class agent_port0 extends uvm_agent;
 		monitor=port0_monitor::type_id::create("monitor",this);
 		scoreboard=port0_scb::type_id::create("scoreboard",this);
 		driver=port0_driver::type_id::create("driver",this);
-		monitor=port0_monitor::type_id::create("monitor",this);
 		sequencer=port0_sqr::type_id::create("sequencer",this);
 		subscriber = port0_subs::type_id::create("subscriber",this);
 		
