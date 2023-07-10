@@ -18,7 +18,7 @@ class ram_scb extends uvm_scoreboard;
   function new (string name, uvm_component parent);
     super.new(name, parent);
 	analysis_export0=new("analysis_export0",this);
-    analysis_fifo=new("analysis_fifo0",this);
+    analysis_fifo0=new("analysis_fifo0",this);
     analysis_export1=new("analysis_export1",this);
     analysis_fifo1=new("analysis_fifo1 ",this);
   endfunction 
