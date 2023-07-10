@@ -16,7 +16,8 @@ class agent_port1 extends uvm_agent;
 	//subscriber
   	port1_subs subscriber;
 	//sequencer
-  	port1_sequencer #(port1_transaction)sequencer;
+  	//port1_sequencer #(port1_transaction)sequencer;
+  	port1_sequencer sequencer;
 
   	uvm_analysis_port #(port1_transaction) analysis_port1;
 	
@@ -40,7 +41,7 @@ class agent_port1 extends uvm_agent;
 		`uvm_info(get_name(), "Connect Phase", UVM_NONE)
      	 //built in
 		driver.seq_item_port.connect(sequencer.seq_item_export);
-      	monitor.analysis_port1.connect(scoreboard.analysis_export1);
+      	monitor.analysis_port1.connect(scoreboard.ana_export1);
 		//built in 
 		monitor.analysis_port1.connect(subscriber.analysis_export);
 
