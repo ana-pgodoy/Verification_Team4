@@ -1,4 +1,5 @@
 # rtl
+../../rtl/sky130_sram_1kbyte_1rw1r_32x256_8.sv
 
 #verification
     +incdir+../defines
