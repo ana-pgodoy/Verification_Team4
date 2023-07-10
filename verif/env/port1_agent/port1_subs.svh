@@ -1,4 +1,4 @@
-class port1_subs extends uvm_subscriber #(uvm_sequence_item);
+class port1_subs extends uvm_subscriber #(port1_transaction);
   `uvm_component_utils(port1_subs)
 
   function new(string name, uvm_component parent);
