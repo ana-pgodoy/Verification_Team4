@@ -7,8 +7,8 @@ Contacto: a.g.ben.min@gmail.com
 
 */
 
-class agent_port0 extends uvm_agent
-	`uvm_component_utils(agent_port0)
+class agent_port0 extends uvm_agent;
+	`uvm_component_utils(agent_port0);
 	//scoreboard
 	port0_scb scoreboard;
 	//driver
