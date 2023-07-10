@@ -5,8 +5,8 @@ Date: 4/07/2023
 File name: agent_port1
 */
 
-class agent_port1 extends uvm_agent
-  `uvm_component_utils(agent_port1)
+class agent_port1 extends uvm_agent;
+  `uvm_component_utils(agent_port1);
 	//scoreboard
  	port1_scb scoreboard;
 	//driver
@@ -39,7 +39,7 @@ class agent_port1 extends uvm_agent
 		super.connect_phase(phase);
 		`uvm_info(get_name(), "Connect Phase", UVM_NONE)
      	 //built in
-	driver.sequencer_item_port.connect(sequencer.seq_item_export);
+		driver.seq_item_port.connect(sequencer.seq_item_export);
       	monitor.analysis_port1.connect(scoreboard.analysis_export1);
 		//built in 
 		monitor.analysis_port1.connect(subscriber.analysis_export);
