@@ -15,6 +15,10 @@ class port0_seq_cfg_obj extends uvm_object;
 		`uvm_field_int(din0,UVM_DEFAULT)
 	`uvm_object_utils_end
 	
+	constraint wmask0_constraint{
+		//no existe lol
+	}
+	
   function new (string name="");
     super.new(name);
   endfunction
