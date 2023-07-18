@@ -22,6 +22,9 @@ class port0_driver extends uvm_driver#(port0_transaction);
 	function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
 		`uvm_info(get_name(), "build phase", UVM_NONE)
+		
+		if(!uvm_config_db#(virtual port0_vintf)::get(this,"","port0_vintf",port0_vintf))
+			`uvm_fatal(get_name(),"config db failed")
 	endfunction
 	
 	virtual task run_phase(uvm_phase phase);
