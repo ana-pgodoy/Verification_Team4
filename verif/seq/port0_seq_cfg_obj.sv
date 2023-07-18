@@ -1,3 +1,12 @@
+/*
+
+Disenador: Benjamin Gonzalez Alvarado
+Modulo: port0_seq_cfg_obj
+Compania: Cinvestav
+Contacto: a.g.ben.min@gmail.com
+
+*/
+
 import ram_defines_pkg::*;
 
 class port0_seq_cfg_obj extends uvm_object;
