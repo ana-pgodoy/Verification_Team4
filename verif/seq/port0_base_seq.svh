@@ -1,6 +1,8 @@
 class port0_base_seq extends uvm_sequence #(port0_transaction);
   `uvm_object_utils(port0_base_seq)
 
+  port0_seq_cfg_obj seq_cfg;
+
   function new(string name ="");
     super.new(name);
   endfunction
