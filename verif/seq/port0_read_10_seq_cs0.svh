@@ -17,7 +17,7 @@ class port0_read_10_seq_cs0 extends port0_base_seq;
 	task body();
 		req=port0_transaction::type_id::create("req");
 		
-		for (int i = 0; i < 4; i++) begin
+		for (int i = 0; i < 10; i++) begin
 			assert(req.randomize() with {req.cs0 ==0;
 										req.we0==1; });
 			start_item(req);
