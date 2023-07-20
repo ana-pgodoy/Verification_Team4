@@ -10,11 +10,11 @@ Contacto:
 import ram_defines_pkg::*;
 
 class port0_seq_cfg_obj extends uvm_object;
-	bit      	    		    cs0;		
-	bit         			    we0;
-	bit   [`WMASK_WIDTH-1:0]  wmask0;
-	bit		[`ADDR_WIDTH-1:0] 	addr0;
-	bit		[`DATA_WIDTH-1:0]   din0;
+	rand bit      	    		    cs0;		
+	rand bit         			    we0;
+	rand bit   [`WMASK_WIDTH-1:0]  wmask0;
+	rand bit		[`ADDR_WIDTH-1:0] 	addr0;
+	rand bit		[`DATA_WIDTH-1:0]   din0;
 	
 	`uvm_object_utils_begin(port0_seq_cfg_obj)
 		`uvm_field_int(cs0,UVM_DEFAULT)
