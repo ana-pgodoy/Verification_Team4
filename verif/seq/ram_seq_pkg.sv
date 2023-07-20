@@ -1,6 +1,7 @@
 package ram_seq_pkg;
 	import uvm_pkg::*;
-	
+	import agent_port0_pkg::*;
+	import agent_port1_pkg::*;
 	`include "uvm_macros.svh"
 	`include "port0_seq_cfg_obj.svh"
   `include "port1_seq_cfg_obj.svh"

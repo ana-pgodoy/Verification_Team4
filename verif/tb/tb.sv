@@ -46,5 +46,11 @@ module tb;
 
     //test =new("ram_base_test", null);
 	end
- 
+`ifdef XCELIUM
+	initial begin
+		$shm_open("shm_db");
+		$shm_probe("ASMTR");
+	end
+`endif 
+
 endmodule
