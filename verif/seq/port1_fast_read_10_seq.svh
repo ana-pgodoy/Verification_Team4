@@ -20,6 +20,11 @@ class port1_fast_read_10_seq extends port1_base_seq
                                req.addr1 == seq_cfg_obj.addr1}
         start_item(req);
         finish_item(req);
+        #10ns;
+        //assert(std::randomize(delay) with {delay > 0 ; delay < 100; })
+        //repeat(delay) begin
+        //   #10ns;
+        //end
       end
    endtask
 endclass
