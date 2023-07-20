@@ -33,8 +33,8 @@ module tb;
       .dout1(intf1.dout1));
   
   // generate clk signal //
-  always clk0 = #5 ~clk0;
-  always clk1 = #5 ~clk1;
+  always clk0 = #5ns ~clk0;
+  always clk1 = #5ns ~clk1;
 
 	initial begin 
 	run_test();
