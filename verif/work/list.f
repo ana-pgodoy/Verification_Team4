@@ -14,6 +14,7 @@
     +incdir+../env
     ../env/ram_env_pkg.sv
     +incdir+../seq
+    ../seq/ram_seq_pkg.sv
     +incdir+../test
     ../test/ram_test_pkg.sv
     ../tb/tb.sv
