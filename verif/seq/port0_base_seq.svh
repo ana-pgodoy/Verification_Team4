@@ -1,3 +1,4 @@
+
 class port0_base_seq extends uvm_sequence #(port0_transaction);
   `uvm_object_utils(port0_base_seq)
 
@@ -7,12 +8,14 @@ class port0_base_seq extends uvm_sequence #(port0_transaction);
     super.new(name);
   endfunction
 
-  task body();
+  task pre_body();
+	/*
     req=port0_transaction::type_id::create("req");
     start_item(req);
     assert(req.randomize());//with {req.a>req.b;});
     finish_item(req);
     get_response(rsp);
+	*/
   endtask
 
 endclass
