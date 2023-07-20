@@ -1,9 +1,9 @@
 /*
 
-Disenador: Benjamin Gonzalez Alvarado
+Disenador: Ana
 Modulo: port0_seq_cfg_obj
 Compania: Cinvestav
-Contacto: a.g.ben.min@gmail.com
+Contacto:
 
 */
 
