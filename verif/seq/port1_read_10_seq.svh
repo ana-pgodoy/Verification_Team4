@@ -6,7 +6,7 @@ class port1_read_10_seq_cs1 extends port1_base_seq
    endfunction
 
    task body();
-      req = ::type_id::create("req");
+      req = port1_transaction::type_id::create("req");
       start_item(req);
       req.randomize() with { req.width == env.env_cfg.agent_cfg.cs1_width:
                             req.heigth == env.env_cfg.agent_cfg.cs1_heigth; };
