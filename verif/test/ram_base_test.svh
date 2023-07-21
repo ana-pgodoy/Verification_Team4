@@ -5,6 +5,7 @@ Date: 03/07/2023
 Version: 01
 File name: ram_base_test.svh
 */
+import ram_seq_pkg::*;
 class ram_base_test extends uvm_test;
 	`uvm_component_utils(ram_base_test )
 
