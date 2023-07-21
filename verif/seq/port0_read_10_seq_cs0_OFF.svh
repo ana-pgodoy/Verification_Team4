@@ -9,7 +9,7 @@ Contacto: a.g.ben.min@gmail.com
 class port0_read_10_seq_cs0_OFF extends port0_base_seq;
 	`uvm_object_utils(port0_read_10_seq_cs0_OFF)
 	
-	function new(string name ="port0_read_10_seq_cs0");
+	function new(string name ="port0_read_10_seq_cs0_off");
 		super.new(name);
 	endfunction
 	
@@ -24,7 +24,7 @@ class port0_read_10_seq_cs0_OFF extends port0_base_seq;
 			start_item(req);
 			finish_item(req);
 			get_response(rsp);
-			//??? IDK THE CLOCK BRO
+			#5//??? IDK THE CLOCK BRO
 		end
 	endtask
 	
