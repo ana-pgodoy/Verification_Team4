@@ -24,7 +24,7 @@ class port0_read_10_seq_cs0_OFF extends port0_base_seq;
 			start_item(req);
 			finish_item(req);
 			get_response(rsp);
-			#5;//??? IDK THE CLOCK BRO
+
 		end
 	endtask
 	
