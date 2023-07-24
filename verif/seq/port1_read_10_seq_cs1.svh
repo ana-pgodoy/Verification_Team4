@@ -24,6 +24,7 @@ class port1_read_10_seq_cs1 extends port1_base_seq;
         			start_item(req);
         			finish_item(req);
         			get_response(rsp);
+			    	#5; //
         			
 		end
 	endtask
