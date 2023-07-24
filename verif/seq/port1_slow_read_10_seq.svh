@@ -6,7 +6,7 @@ Version: 1
 File name: port1_slow_read_10_seq.svh
 */
 
-class port1_slow_read_10_seq extends port1_base_seq
+class port1_slow_read_10_seq extends port1_base_seq;
    `uvm_object_utils(port1_slow_read_10_seq)
 
    function new(string name = "");
@@ -17,7 +17,7 @@ class port1_slow_read_10_seq extends port1_base_seq
      for (int i = 0; i < 9; i++) begin
         req = port1_transaction::type_id::create("req");
         req.randomize() with { req.cs1 == 0;
-                               req.addr1 == seq_cfg_obj.addr1}
+                               req.addr1 == seq_cfg_obj.addr1;};
         start_item(req);
         finish_item(req);
         #500ns;

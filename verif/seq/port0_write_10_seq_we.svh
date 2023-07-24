@@ -14,6 +14,7 @@ class  port0_write_10_seq_we extends port0_base_seq;
      `uvm_info(get_name(), "Generating sequence item", UVM_MEDIUM);
     finish_item(req);
     //get_response(rsp);
+    end
   endtask
 
 endclass
