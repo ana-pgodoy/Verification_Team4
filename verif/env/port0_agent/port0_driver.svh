@@ -29,6 +29,23 @@ class port0_driver extends uvm_driver#(port0_transaction);
 	
 	virtual task run_phase(uvm_phase phase);
 		`uvm_info(get_name(), "Run Phase", UVM_NONE)
+		
+		txn = port0_transaction::type_id::create("txn");
+		
+		forever begin
+			seq_item_port.get_next_item(txn);
+			@(posedge port0_vintf.clk0)
+			begin
+				port0_vintf.cs0<=txn.cs0;
+				port0_vintf.we0<=txn.we0;
+				port0_vintf.wmask0<=txn.wmask0;
+				port0_vintf.addr0<=txn.addr0;
+				port0_vintf.din0<=txn.din0;
+			end
+		seq_item_port.item_done();
+		end
+		
+		
 	endtask
 
 endclass
