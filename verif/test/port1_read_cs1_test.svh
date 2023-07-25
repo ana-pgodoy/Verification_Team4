@@ -1,7 +1,7 @@
-class port1_fast_read_test extends ram_base_test; // specific test
-	`uvm_component_utils(port1_fast_read_test)
+class port1_read_cs1_test extends ram_base_test; // specific test
+	`uvm_component_utils(port1_read_cs1_test)
 
-	port1_fast_read_10_seq  fast_read_seq;
+	port1_read_10_seq_cs1  read_seq;
    port1_seq_cfg_obj       seq_cfg;
 
 	function new(string name, uvm_component parent);
@@ -19,8 +19,8 @@ class port1_fast_read_test extends ram_base_test; // specific test
          seq_cfg.randomize();
 			//seq_cfg.addr1 = ;
          uvm_config_db#(port1_seq_cfg_obj)::set(this,"ram_env.agent_1","seq_cfg",seq_cfg);
-			fast_read_seq = port1_fast_read_10_seq::type_id::create("fast_read_seq");
-			fast_read_seq.start(ram_env.agent_1.sequencer);
+			read_seq = port1_read_10_seq_cs1::type_id::create("fast_read_seq");
+			read_seq.start(ram_env.agent_1.sequencer);
 		end
 
 		#1us;
