@@ -4,7 +4,7 @@ class port0_base_seq extends uvm_sequence #(port0_transaction);
     
       port0_seq_cfg_obj port0_cfg;
 
-	function new(string name ="");
+	function new(string name ="port0_base_seq");
   		super.new(name);
  	endfunction
     
