@@ -17,7 +17,7 @@ class port1_fast_read_10_seq extends port1_base_seq;
      for (int i = 0; i < 9; i++) begin
         req = port1_transaction::type_id::create("req");
         req.randomize() with { req.cs1 == 0;
-                               req.addr1 == seq_cfg_obj.addr1}
+                              req.addr1 == seq_cfg_obj.addr1;};
         start_item(req);
         finish_item(req);
         //#10ns;    /env/driver
