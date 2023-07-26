@@ -25,6 +25,18 @@ class port1_driver extends uvm_driver#(port1_transaction);
 	
 	virtual task run_phase(uvm_phase phase);
 		`uvm_info(get_name(), "Run Phase", UVM_NONE)
+		
+		forever begin
+			@(posedge port1_vintf.clk1)
+			begin
+				seq_item_port.get_next_item(req);
+				port1_vintf.cs1<=req.cs1;
+				port1_vintf.addr1<=req.addr1;
+			end
+		seq_item_port.item_done();
+		end
+		
+		
 	endtask
 
 endclass
