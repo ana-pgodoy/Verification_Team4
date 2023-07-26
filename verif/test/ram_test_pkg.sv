@@ -4,4 +4,7 @@ package ram_test_pkg;
 	`include "uvm_macros.svh"
 	
 	`include "ram_base_test.svh"	
+	`include "port1_fast_read_test.svh"
+	`include "port1_slow_read_test.svh"
+	`include "port1_read_cs1_test.svh"
 endpackage
