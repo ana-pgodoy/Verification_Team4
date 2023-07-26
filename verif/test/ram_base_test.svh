@@ -10,6 +10,10 @@ File name: ram_base_test.svh
 	`uvm_component_utils(ram_base_test )
 
 	ram_env enviroment;
+	port0_base_seq port0_base;
+	port0_seq_cfg_obj port0_cfg;
+	port1_base_seq port1_base;
+	port1_seq_cfg_obj port1_cfg;
 	
   function new (string name, uvm_component parent);
     super.new(name, parent);
@@ -28,10 +32,6 @@ File name: ram_base_test.svh
 	endfunction
 
 	task run_phase(uvm_phase phase);
-			port0_base_seq port0_base;
-			port0_seq_cfg_obj port0_cfg;
-			port1_base_seq port1_base;
-			port1_seq_cfg_obj port1_cfg;
 
 			phase.raise_objection(this);
 			
