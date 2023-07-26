@@ -1,7 +1,7 @@
 class port1_slow_read_test extends ram_base_test; // specific test
 	`uvm_component_utils(port1_slow_read_test)
 
-	port1_slow_read_test    slow_read_seq;
+	port1_slow_read_10_seq    slow_read_seq;
   port1_seq_cfg_obj       seq_cfg;
 
 	function new(string name, uvm_component parent);
