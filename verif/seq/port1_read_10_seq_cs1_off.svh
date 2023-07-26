@@ -6,8 +6,8 @@ Version: 1
 File name: port1_read_10_seq_cs1_off.svh
 */
 
-class port1_read_10_seq_cs1 extends port1_base_seq;
-   `uvm_object_utils(port1_read_10_seq_cs1)
+class port1_read_10_seq_cs1_off extends port1_base_seq;
+   `uvm_object_utils(port1_read_10_seq_cs1_off)
 
    function new(string name = "");
       super.new(name);
