@@ -6,7 +6,7 @@ Version: 1
 File name: port1_fast_read_10_seq.svh
 */
 
-class port1_fast_read_10_seq extends port1_base_seq
+class port1_fast_read_10_seq extends port1_base_seq;
    `uvm_object_utils(port1_fast_read_10_seq)
 
    function new(string name = "");
