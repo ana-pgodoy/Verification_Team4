@@ -20,7 +20,8 @@ class port1_read_10_seq_cs1_OFF extends port1_base_seq;
 		for (int i = 0; i < 10; i++) begin
 	
 	 //assert(req.randomize() with {req.cs1 ==1;req.we0==1; });
-	 req.randomize() with {req.cs1 ==1;req.we0==1;};
+	 req.randomize() with {req.cs1 ==1;};
+	 //req.we0==1;};
 			start_item(req);
 			finish_item(req);
 			get_response(rsp);
