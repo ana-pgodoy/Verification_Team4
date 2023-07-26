@@ -11,7 +11,7 @@ class  port0_rewrite_10_seq extends port0_base_seq;
     start_item(req);
      req.randomize with {we0 == 1'b0;
                         cs0 ==1'b0;
-						addr0<=3'b5;};
+			addr0<=3'h5;};
      `uvm_info(get_name(), "Generating sequence item", UVM_MEDIUM);
     finish_item(req);
 	end
