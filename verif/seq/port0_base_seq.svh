@@ -9,7 +9,7 @@ class port0_base_seq extends uvm_sequence #(port0_transaction);
  	endfunction
     
    	 task pre_body();
-	 	if(!uvm_config_db#(port0_seq_cfg_obj)::get(null,"ram_base_test.ram_env.agent_port0","port0_cfg",port0_cfg))
+	 	if(!uvm_config_db#(port0_seq_cfg_obj)::get(null,"ram_base_test.enviroment.agent_0","port0_seq_cfg_obj",port0_cfg))
 			`uvm_fatal(get_name(), "Failed to get sequence configuration object")
 	endtask
 endclass
