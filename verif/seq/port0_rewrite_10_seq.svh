@@ -1,7 +1,7 @@
 class  port0_rewrite_10_seq extends port0_base_seq;
   `uvm_object_utils(port0_rewrite_10_seq)
 
-  function new(string name ="port0_write_10_seq_we");
+	function new(string name ="port0_rewrite_10_seq_we");
     super.new(name);
   endfunction
 
