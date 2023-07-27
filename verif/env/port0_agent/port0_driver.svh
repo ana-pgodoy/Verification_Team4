@@ -34,15 +34,18 @@ class port0_driver extends uvm_driver#(port0_transaction);
 		
 		forever begin
 			//req is a native variable to uvm driver
-			@(posedge port0_vintf.clk0)
-			begin
+			//@(posedge port0_vintf.clk0)
+			//begin
 				seq_item_port.get_next_item(req);
 				port0_vintf.cs0<=req.cs0;
 				port0_vintf.we0<=req.we0;
 				port0_vintf.wmask0<=req.wmask0;
 				port0_vintf.addr0<=req.addr0;
 				port0_vintf.din0<=req.din0;
-			end
+			//end
+			@(posedge port0_vintf.clk0);
+			port0_vintf.we0 <= 'b1;
+			@(posedge port0_vintf.clk0);
 		seq_item_port.item_done();
 		end
 		
