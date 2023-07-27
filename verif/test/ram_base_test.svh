@@ -50,9 +50,9 @@ File name: ram_base_test.svh
 		port0_base	=port0_write_10_seq_we::type_id::create("port0_base");
 		port0_base.start(enviroment.agent_0.sequencer);
       //port1_base =port1_base_seq::type_id::create("port1_base");
-		port1_base =port1_read_10_seq_cs1::type_id::create("port1_base");
+		//port1_base =port1_read_10_seq_cs1::type_id::create("port1_base");
       
-      port1_base.start(enviroment.agent_1.sequencer);
+     // port1_base.start(enviroment.agent_1.sequencer);
       
 	end
 		phase.drop_objection(this);
