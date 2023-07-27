@@ -27,7 +27,7 @@ class port0_read_cs0_test extends ram_base_test; // specific test
          seq_cfg.randomize();
 			//seq_cfg.addr1 = ;
       uvm_config_db#(port0_seq_cfg_obj)::set(this,"ram_env.agent_0","seq_cfg",seq_cfg);
-			read_cs0_seq = port1_fast_read_10_seq::type_id::create("read_cs0_seq");
+			read_cs0_seq = port0_read_10_seq_cs0::type_id::create("read_cs0_seq");
       read_cs0_seq.start(enviroment.agent_0.sequencer);
 		end
 
