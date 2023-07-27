@@ -47,8 +47,8 @@ File name: ram_base_test.svh
 		uvm_config_db#(port1_seq_cfg_obj)::set(this,"enviroment.agent_1","port1_cfg",port1_cfg);
 
 		//port0_base=port0_base_seq::type_id::create("port0_base");
-		port0_base=write_10_seq_we::type_id::create("port0_base");
-      port0_base.start(enviroment.agent_0.sequencer);
+		port0_base	=port0_write_10_seq_we::type_id::create("port0_base");
+		port0_base.start(enviroment.agent_0.sequencer);
       //port1_base =port1_base_seq::type_id::create("port1_base");
 		port1_base =port1_read_10_seq_cs1::type_id::create("port1_base");
       
