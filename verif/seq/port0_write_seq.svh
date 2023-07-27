@@ -1,7 +1,7 @@
 class  port0_write_seq extends port0_base_seq;
   `uvm_object_utils(port0_write_seq)
 
-  function new(string name ="port0_write_seq);
+  function new(string name ="port0_write_seq");
     super.new(name);
   endfunction
 
