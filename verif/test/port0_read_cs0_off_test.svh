@@ -2,7 +2,7 @@ class port0_read_cs0_off_test extends ram_base_test; // specific test
 	`uvm_component_utils(port0_read_cs0_off_test)
 
 	port0_read_10_seq_cs0_OFF  read_seq_off_port0;
-  	port1_seq_cfg_obj          seq_cfg;
+  	port0_seq_cfg_obj          seq_cfg;
 
 	function new(string name, uvm_component parent);
 		super.new(name,parent);
