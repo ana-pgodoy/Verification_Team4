@@ -1,5 +1,5 @@
 class port1_read_cs1_off_test extends ram_base_test; // specific test
-	`uvm_component_utils(port1_read_cs1_test)
+	`uvm_component_utils(port1_read_cs1_off_test)
 
 	port1_read_10_seq_cs1_off  read_seq_off;
   port1_seq_cfg_obj          seq_cfg;
@@ -19,8 +19,8 @@ class port1_read_cs1_off_test extends ram_base_test; // specific test
          seq_cfg.randomize();
 			//seq_cfg.addr1 = ;
          uvm_config_db#(port1_seq_cfg_obj)::set(this,"ram_env.agent_1","seq_cfg",seq_cfg);
-			read_seq = port1_read_10_seq_cs1::type_id::create("read_seq_off");
-			read_seq.start(enviroment.agent_1.sequencer);
+			read_seq_off = port1_read_10_seq_cs1_off::type_id::create("read_seq_off");
+			read_seq_off.start(enviroment.agent_1.sequencer);
 		end
 
 		#1us;
