@@ -10,9 +10,11 @@ File name: ram_base_test.svh
 	`uvm_component_utils(ram_base_test )
 
 	ram_env enviroment;
-	port0_base_seq port0_base;
+	//port0_base_seq port0_base;
+	port0_write_10_seq_we port0_base;//USEN EL HANDLER CORRECTO LO PUSE ASI PARA QUE SEA RAPIDO
 	port0_seq_cfg_obj port0_cfg;
-	port1_base_seq port1_base;
+	//port1_base_seq port1_base;
+	port1_read_10_seq_cs1 port1_base;//APLICA LO MISMO ^
 	port1_seq_cfg_obj port1_cfg;
 	
   function new (string name, uvm_component parent);
